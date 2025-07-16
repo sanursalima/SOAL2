@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Seminar Nasional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pendaftaran Seminar Nasional</h1>
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="fullName">Nama Lengkap:</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="instance">Instansi:</label>
+                <input type="text" id="instance" name="instance" required>
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Pilihan Topik Seminar:</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Pilih Topik</option>
+                    <option value="">IoT</option>
+                    <option value="">Networking</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Metode Pembayaran:</label>
+                <div class="radio-group">
+                    <input type="radio" id="bankTransfer" name="paymentMethod" value="transfer_bank" required>
+                    <label for="bankTransfer">Transfer Bank</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="creditCard" name="paymentMethod" value="kartu_kredit" required>
+                    <label for="creditCard">Kartu Kredit</label>
+                </div>
+            </div>
+
+            <button type="submit">Daftar</button>
+        </form>
+
+        <div id="confirmationMessage" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
