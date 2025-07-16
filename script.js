@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to fetch seminar topics from backend
     async function fetchSeminarTopics() {
         try {
-            const response = await fetch('http://localhost:8080/api/topik'); // Adjust URL if necessary
+            const response = await fetch('http://localhost:8081/api/topik'); // Adjust URL if necessary
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch('http://localhost:8080/api/pendaftaran', { // Adjust URL if necessary
+            const response = await fetch('http://localhost:8081/api/pendaftaran', { // Adjust URL if necessary
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

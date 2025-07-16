@@ -15,7 +15,7 @@ import java.util.logging.Logger; // Menggunakan java.util.logging.Logger
 
 @RestController // Menandakan bahwa ini adalah REST Controller
 @RequestMapping("/api") // Base path untuk semua endpoint di controller ini
-@CrossOrigin(origins = "http://localhost:8080") // Izinkan akses dari frontend yang berjalan di port 8080 (sesuaikan jika frontend Anda di port lain)
+@CrossOrigin(origins = "*")  // Izinkan akses dari frontend yang berjalan di port 8080 (sesuaikan jika frontend Anda di port lain)
 public class PendaftaranController {
 
     private static final Logger logger = Logger.getLogger(PendaftaranController.class.getName());
